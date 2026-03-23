@@ -1,6 +1,6 @@
 # Sales Performance Analysis – Global Superstore Dataset
 
-This project focuses on the comprehensive preparation and analysis of a global sales dataset, culminating in a planned interactive dashboard for Power BI. It demonstrates advanced data cleaning techniques, robust outlier management, and the generation of business-relevant insights.
+This project focuses on the comprehensive preparation and analysis of a global sales dataset, culminating in an interactive Power BI dashboard. It demonstrates advanced data cleaning techniques, robust outlier management, and the generation of business-relevant insights.
 
 ---
 
@@ -9,7 +9,7 @@ This project focuses on the comprehensive preparation and analysis of a global s
 - Clean and prepare raw transactional sales data for robust analysis.
 - Identify and understand data anomalies, particularly through outlier detection.
 - Explore key business metrics and their interrelationships (e.g., Sales, Profit, Discount).
-- Develop a strategic plan for an interactive Power BI dashboard to visualize sales performance.
+- Build an interactive Power BI dashboard to visualize sales performance across segments, categories, and regions.
 
 ---
 
@@ -58,33 +58,33 @@ The cleaned dataset was exported to `/data/Global_Superstore_Clean.csv` for use 
 -   **Python**: Used for data loading, cleaning, transformation, and exploratory analysis.
     -   `Pandas`: Data manipulation and preparation.
     -   `Matplotlib`, `Seaborn`: Data visualization for exploratory analysis.
--   **Power BI**: Planned for the interactive dashboard development, leveraging the cleaned dataset.
+-   **Power BI**: Interactive dashboard development, leveraging the cleaned dataset.
 
 ---
 
-## Power BI Dashboard Plan
+## Power BI Dashboard
 
-The visualization layer of this project is designed for **Power BI**, structured into two thematic pages to provide clear and actionable insights.
+The report is available in the repository (`SalesInsight.pbix`) and structured into two thematic pages.
 
 ### Page 1 – Sales Overview
 
 Focuses on general business performance and sales trends.
 
 -   **KPI Cards**: Total Sales, Total Profit, Average Discount.
--   **Line Chart**: Sales and Profit by Month.
--   **Bar Charts**: Sales by Segment, Sales by Region.
--   **Column Chart**: Top 10 Sub-Categories by Sales.
--   **Filters (Slicers)**: Order Year / Month, Region, Segment, Category.
+-   **Line Chart**: Monthly Sales vs Profit Trend (dual axis, 2011–2014).
+-   **Bar Charts**: Sales by Segment, Sales by Category, Sales by Sub-Category.
+-   **Filters (Slicers)**: Month, Year, Region, Segment, Category.
 
 ### Page 2 – Customer & Order Behavior
 
 Provides insights into order dynamics and customer behavior.
 
--   **KPI Cards**: Total Orders, Total Distinct Customers, Average Shipping Delay.
--   **Column Chart**: Quantity by Sub-Category.
--   **Scatter Plot**: Profit vs. Discount (critical for outlier contextualization).
--   **Stacked Bar Chart**: Sales by Region and Category.
--   **Table (for outlier review)**: Order ID, Customer Name, Sales, Discount, Profit
+-   **KPI Cards**: Total Orders, Total Customers, Average Shipping Delay.
+-   **Bar Chart**: Quantity by Sub-Category.
+-   **Scatter Plot**: Discount vs Profit, segmented by Sales Bucket (<2K, 2K–10K, 10K+) — directly contextualizes the outlier findings from the EDA.
+-   **Stacked Bar Chart**: Sales by Category — Top 5 Performing Regions.
+-   **Table (for outlier review)**: Order ID, Customer Name, Sales, Discount, Profit — for outlier review.
+-   **Custom Tooltip**: Order, Product Name, Sales, Profit, Discount on hover.
 
 ---
 
@@ -117,7 +117,7 @@ sales-performance-dashboard/
 
 -   Statistical outliers in sales, profit, and shipping cost are predominantly genuine business events rather than data errors, reflecting high-value transactions or aggressive discount strategies.
 -   A clear inverse relationship exists between `Discount` and `Profit`, highlighting the direct impact of promotional strategies on profitability.
--   The prepared dataset provides a robust foundation for granular analysis of sales performance, customer behavior, and regional trends in Power BI.
+-   The Discount vs Profit scatter plot, segmented by sales volume, reveals that high-discount transactions are disproportionately concentrated in lower sales buckets — suggesting margin erosion without volume compensation.
 
 ---
 
@@ -128,7 +128,7 @@ This project significantly enhanced my skills in:
 -   **Robust Data Cleaning & Transformation**: Handling diverse data types and ensuring data integrity for analytical readiness.
 -   **Contextual Outlier Analysis**: Moving beyond simple statistical detection to understand and justify data anomalies from a business perspective.
 -   **Exploratory Data Analysis (EDA)**: Utilizing statistical and visual methods to uncover relationships and validate hypotheses.
--   **Analytical Project Structuring**: Organizing a data analysis workflow from raw data to a clear dashboard plan.
+-   **Analytical Project Structuring**: Organizing a data analysis workflow from raw data to a delivered dashboard.
 -   **Applying Business Knowledge**: Translating data findings into actionable insights for business stakeholders, particularly in the context of sales and profitability.
 
 This project reinforces my ability to deliver comprehensive data solutions that bridge technical analysis with practical business needs.
