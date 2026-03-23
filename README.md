@@ -83,7 +83,7 @@ Provides insights into order dynamics and customer behavior.
 -   **Bar Chart**: Quantity by Sub-Category.
 -   **Scatter Plot**: Discount vs Profit, segmented by Sales Bucket (<2K, 2K–10K, 10K+) — directly contextualizes the outlier findings from the EDA.
 -   **Stacked Bar Chart**: Sales by Category — Top 5 Performing Regions.
--   **Table (for outlier review)**: Order ID, Customer Name, Sales, Discount, Profit — for outlier review.
+-   **Table**: Order ID, Customer Name, Sales, Discount, Profit — for outlier review.
 -   **Custom Tooltip**: Order, Product Name, Sales, Profit, Discount on hover.
 
 ---
